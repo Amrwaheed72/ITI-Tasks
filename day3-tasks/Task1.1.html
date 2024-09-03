@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>document</title>
+</head>
+
+<body>
+    <h1>Heading</h1>
+    <hr>
+    <script>
+        do {
+            // will repeat until the user inters a message
+            var message = prompt("Enter Your Message");
+        } while (!message);
+        for (var i = 1; i < 7; i++) {
+            document.write("<h" + i + ">" + message + "</h" + i + ">");
+        }
+    </script>
+</body>
+
+</html>

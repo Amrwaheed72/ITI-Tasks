@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>document</title>
+    <style>
+
+        p {
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Summing Numbers</h1><hr>
+    <p>The Sum is</p>
+    <h2></h2>
+    <script>
+        var sum = 0;
+        do {
+            var num = prompt("Enter a Number");
+            if (num === 0) {
+                break;
+            }
+            if (isNaN(num) || num === "") {
+                alert("Please Enter a Number");
+                continue;
+            }
+            sum += parseInt(num);
+        } while (sum <= 100);
+        alert("The Sum is " + sum);
+        document.write("<p>" + sum + "</p>");
+    </script>
+</body>
+
+</html>

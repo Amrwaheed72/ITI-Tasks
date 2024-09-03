@@ -1,0 +1,45 @@
+table{
+    width: 600px;
+    height: 350px;
+    margin: 20px auto;
+    border: 3px solid #4f81bd;
+    border-collapse: collapse;
+}
+table thead{
+    background-color: #4f81bd;
+}
+table thead tr, table tbody{
+    border: 2.7px solid black; 
+    text-align: center;   
+}
+table thead tr td{
+    font-size: 20px;
+    height: 45px;
+    color: white;
+}
+.move{
+    text-align: center;
+    font-size: 17.5px;
+    opacity: 0.6;
+    text-decoration: underline;
+    font-style: italic;
+}
+table tbody .zero {
+    background-color: #b8cce4;
+}
+table tbody .first , .second {
+    background-color: #dbe5f1;
+}
+table tbody tr td{
+    border: 1.5px solid black;
+}
+table tbody .edit{
+    background-color: white;
+    font-style: italic;
+    text-decoration: underline;
+}
+.add{
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.6;
+}

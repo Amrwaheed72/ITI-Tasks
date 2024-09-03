@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(210, 195, 195);
+}
+.main-heading, #first-para , table tr .second,#foot-heading{
+    color: #79a200;
+}
+.main-heading{
+    text-align: center;
+    font-size: 50px;
+}
+#first-para{
+    text-align: center;
+    font-size: 27px;
+    margin: 10px auto;
+    width: 80%;
+    line-height: 50px;
+}
+table{
+    border-top: 10px dotted brown;
+    border-bottom: 10px dotted brown;
+    margin: 30px auto;
+    padding: 30px;
+}
+table tr td {
+    padding: 20px;
+}
+table tr .first{
+    color: #8c6944;
+    font-size: 25px;
+    max-width: 90%;
+}
+table tr .second{
+    font-size: 22px;
+}
+table tr td img {
+    width: 250px;
+    height: 250px;
+}
+#foot-heading{
+    text-align: center;
+    font-size: 50px;
+}
+#end{
+    color: #8c6944;
+    font-size: 30px;
+    text-align: center;
+}

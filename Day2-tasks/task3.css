@@ -1,0 +1,76 @@
+form {
+    margin: 10px auto;
+    text-align: center;
+    height: 60vh;
+}
+form .another-sign{
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+}
+form .one{
+    color: white;
+}
+form .two{
+    background-color: #00afee;
+    color: white;
+}
+#or{
+    background-color: gainsboro;
+    width: 50px;
+    height: 30px;
+    padding-top : 6px;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+.form-group {
+    text-align: center;
+    margin: 0 auto;
+    width: 700px;
+    height: 240px;
+}
+
+label {
+    margin-right: 20px;
+    font-size: 22.5px;
+}
+
+.form-main {
+    width: 500px;
+    margin: 20px auto;
+    height: 40px;
+    font-size: 20px;
+}
+input::placeholder{
+    font-size: 20px;
+}
+#keep{
+    margin-right: 150px;
+}
+#label-check{
+    font-size: 19px;
+}
+#forgot{
+    text-decoration: none;
+    font-size: 20px;
+}
+.btn {
+    width: 500px;
+    height: 50px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    color: white;
+    margin-bottom: 20px;
+}
+#new {
+    font-size: 25px;
+    text-decoration: none;
+    color: #00afee;
+}
+form .one, .btn{
+    background-color:#3b5999;
+}

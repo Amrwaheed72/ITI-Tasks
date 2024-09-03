@@ -1,0 +1,87 @@
+#para {
+    color: gray;
+    width: 500px;
+    margin: 10px auto;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 30px;
+}
+
+.father {
+    color: gray;
+    border: 1px solid gray;
+    margin: 10px auto;
+    width: 900px;
+}
+
+div p {
+    color: gray;
+    width: 500px;
+    margin: 10px auto;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+p:hover {
+    background-color: #f2f2f2;
+    transition: 0.5s;
+}
+
+form {
+    margin: 10px auto;
+    text-align: center;
+    box-shadow: 1px 1px 10px;
+    background-image: linear-gradient(to right, purple, rgb(101, 101, 238));
+    height: 60vh;
+    background-color: transparent;
+}
+
+.form-group {
+    border: 2px solid white;
+    text-align: center;
+    margin: 0 auto;
+    width: 700px;
+    height: 240px;
+    box-shadow: 1px 1px 10px white;
+    backdrop-filter: blur(20px);
+    /* background-image: linear-gradient(to right, rgb(209, 129, 209), rgb(205, 205, 225)); */
+}
+
+label {
+    margin-right: 20px;
+    font-size: 22.5px;
+}
+
+.form-main {
+    width: 500px;
+    margin: 30px auto;
+    height: 2em;
+    border: 2px solid gray;
+    border-radius: 20px;
+    box-shadow: 3px 3px 20px black;
+}
+
+input:placeholder-shown {
+    font-size: 13.5px;
+}
+
+.btn {
+    width: 200px;
+    outline: none;
+    border-radius: 50px;
+    height: 50px;
+    margin-top: 180px;
+    font-size: 25px;
+    background-image: linear-gradient(to right, rgb(209, 129, 209), rgb(205, 205, 225));
+    background-color: transparent;
+
+}
+
+#new {
+    color: wheat;
+    font-size: 30px;
+    margin-top: 50px;
+    text-decoration: none;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+
+<body>
+    <script>
+        do {
+            var imageName= prompt("enter image Name from : [img1.jpg, img2.jpg, img3.jpg]");
+        } while (!imageName);
+        do {
+            var text =prompt("enter the text you want to show");
+        } while (!text===String);
+        do {
+            var color = prompt("enter your fav color");
+        } while (!color);
+        document.write("<h1 style='color: " + color + "'>" + text + "</h1><img src='" + imageName + "' alt='ITI-Mansoura-Branch' style='width: 500px; height: 400px; border: 10px solid " + color + "'>");
+    </script>
+</body>
+
+</html>
