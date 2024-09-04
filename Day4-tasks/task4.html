@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="date"></h1>
+    <h1 id="day"></h1>
+    <script>
+        const today = new Date();
+        const indexOfDay = today.getDay();
+        const DayName = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1;
+        const date = today.getDate();
+        const todayDate = `${year}-${month}-${date}`;
+        document.write("<h1>" + "Today's Date: " + todayDate + "</h1>")
+        document.write("<h1>" + "Today is: " + DayName[indexOfDay+2] + "</h1>")
+    </script>
+</body>
+
+</html>
