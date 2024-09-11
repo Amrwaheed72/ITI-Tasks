@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8    " />
+    <title></title>
+    <style>
+        #mainwrapper {
+            width: 800px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        #imgwrapper {
+            width: 600px;
+            margin: 10px;
+            margin: 10px auto;
+        }
+
+        #controlswrapper {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        input {
+            width: 100px;
+            padding: 5px;
+            font-weight: bold;
+            margin-inline: 10px;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainwrapper">
+        <div id="imgwrapper">
+            <img src="./عصفور1.jpeg" id="myimg" />
+        </div>
+        <div id="controlswrapper">
+            <input type="button" value="Start" onclick="startShow();" />
+            <input type="button" value="Next" onclick="nextImg();" />
+            <input type="button" value="Prev" onclick="prevImg();" />
+            <input type="button" value="stop" onclick="stopShow();" />
+        </div>
+    </div>
+    <script>
+        var image = ["./عصفور1.jpeg", "./عصفور2.jpeg", "./عفصور3.jpeg", "./عفصور4.jpeg", "./عفصور5.jpeg", "./عفصور6.jpeg"];
+        i = 0;
+        function nextImg() {
+            i++;
+            if (i >= image.length) i = 0;
+            myimg.src = image[i];
+        }
+        function prevImg() {
+            i--;
+            if (i < 0) i = image.length - 1;
+            myimg.src = image[i];
+        }
+        function startShow() {
+            t = setInterval(nextimg(), 1000);
+        }
+        function stopShow() {
+            clearInterval(t);
+        }
+    </script>
+</body>
+
+</html>
