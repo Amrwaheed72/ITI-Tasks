@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .typing {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="typing"></div>
+
+    <body>
+        <script>
+            const message = "This text is typed letter by letter, then the window will close.";
+            const typingSpeed = 100;
+            let index = 0;
+            function typing() {
+                if (index < message.length) {
+                    document.getElementById('typing').textContent += message.charAt(index);
+                    index++;
+                    setTimeout(typing, typingSpeed);
+                } else {
+                    setTimeout(() => window.close(), 1000); 
+                }
+            }
+            window.onload = typing;
+        </script>
+    </body>
+
+</html>
