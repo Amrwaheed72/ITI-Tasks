@@ -8,11 +8,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
-            margin: 0;
+            margin: 40px;
         }
 
         a {
@@ -27,17 +24,17 @@
 
 <body>
 
-    <a href="#" onclick="openTypewriterWindow()">Click to open typewriter window</a>
+    <a href="./newTap.html" onclick="openNewTap()">Click to open typing window</a>
     <script>
-        function openTypewriterWindow() {
-            const newWindow = window.open('', '', `width=${window.innerWidth / 3},height=${window.innerHeight / 3}`);
-            newWindow.document.write(`
+        openNewTap = () => {
+            const newTap = window.open('', '', `width=${window.innerWidth / 3},height=${window.innerHeight / 3}`);
+            newTap.document.write(`
             <!DOCTYPE html>
             <html lang="en">
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Typewriter Effect</title>
+                <title>document</title>
                 <style>
                     body {
                         font-family: Arial, sans-serif;
@@ -47,37 +44,35 @@
                         height: 100vh;
                         margin: 0;
                     }
-                    #typewriter {
+                    .typing {
                         font-size: 24px;
                         font-weight: bold;
                     }
                 </style>
             </head>
             <body>
-                <div id="typewriter"></div>
+                <div class="typing"></div>
                 <script>
                     const message = "This text is typed letter by letter, then the window will close.";
-                    const typingSpeed = 100; // Milliseconds between each letter
+                    const typingSpeed = 100;
                     let index = 0;
-                    function typeWriter() {
+                    function typing() {
                         if (index < message.length) {
-                            document.getElementById('typewriter').textContent += message.charAt(index);
+                            document.getElementById('typing').textContent += message.charAt(index);
                             index++;
-                            setTimeout(typeWriter, typingSpeed);
+                            setTimeout(typing, typingSpeed);
                         } else {
-                            // Close the window after typing is complete
-                            setTimeout(() => window.close(), 1000); // Wait 1 second before closing
+                            setTimeout(() => window.close(), 1000);
                         }
                     }
-                    // Start typing when the window loads
-                    window.onload = typeWriter;
-                <script/>
-            </body>
-            </html>
-        `);
-            newWindow.document.close();
-        }
+                    window.onload = typing;
     </script>
+</body>
+
+</html>
+`);
+newTap.document.close();
+}
 
 </body>
 

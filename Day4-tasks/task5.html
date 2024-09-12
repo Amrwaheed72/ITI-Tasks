@@ -1,6 +1,11 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <title>Document</title>
     <style>
         table {
@@ -17,7 +22,7 @@
         }
 
         th {
-            background-color: #6f6f6f;
+            background-color: #ffffff;
         }
 
         td {
@@ -28,25 +33,24 @@
 
 <body>
     <script>
-        var grades = [
-            [1, 2, 3],
-            [4, 5, 6]
-        ];
+        let nums = [];
+        for (let i = 0; i < 2; i++) {
+            let row = prompt(`Enter values for row ${i + 1} separated by commas:`).split(",").map(Number);
+            nums.push(row);
+        }
 
         document.write("<table>");
         document.write("<tr><th>ST1</th><th>ST2</th><th>ST3</th><th>Sum</th></tr>");
-
-        for (var i = 0; i < grades.length; i++) {
-            var sum = 0;
+        for (let i = 0; i < nums.length; i++) {
+            let sum = 0;
             document.write("<tr>");
-            for (var j = 0; j < grades[i].length; j++) {
-                document.write("<td>" + grades[i][j] + "</td>");
-                sum += grades[i][j];
+            for (let j = 0; j < nums[i].length; j++) {
+                document.write("<td>" + nums[i][j] + "</td>");
+                sum += nums[i][j];
             }
             document.write("<td>" + sum + "</td>");
             document.write("</tr>");
         }
-
         document.write("</table>");
     </script>
 </body>

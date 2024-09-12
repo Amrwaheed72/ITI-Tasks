@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>document</title>
 </head>
-
 <body>
     <script>
-        document.writeln("<h1>Random Names Generator</h1>")
-        document.writeln("<p>Relode page to regenerate new names</p>")
-        function getRandomNames(names) {
+        document.writeln("<h1>Bottle game</h1>")
+        document.writeln("<h3>Enter 5 names to generate two random names!</h3>")
+
+        let names = [];
+        for (let i = 0; i < 5; i++) {
+            let name = prompt(`Enter name ${i + 1}:`);
+            names.push(name);
+        }
+
+        getRandomNames=(names)=> {
             let name1, name2;
             do {
                 name1 = names[Math.floor(Math.random() * names.length)];
@@ -20,10 +26,8 @@
             return [name1, name2];
         }
 
-        var names = ["amr","ahmed", "ali", "moustafa", "ibraheem", "alaa", "hamada"];
         const [name1, name2] = getRandomNames(names);
-        document.writeln("<h2 style='color: lightgreen; font-weight: bold;'>" + name1 + ' ' + name2 + "</h2>")
-
+        document.writeln("<h2 style='color: red; font-weight: bold;'>" + name1 + ' ' + name2 + "</h2>")
     </script>
 </body>
 

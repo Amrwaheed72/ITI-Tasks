@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>document</title>
 </head>
 
 <body>
     <script>
-        let input = prompt("Enter Your Values").split(",").map(Number);
-        console.log(input); 
+        let input = prompt("Enter Your Values separated by commas").split(",").map(Number);
+        console.log(input); // for testing
         document.write("<h1>"+"Your Array is : " + input + "</h1>");
         let sum=0; 
-        let summation =input.map(function(num){
+        let summation =input.map((num)=>{
             sum+=num
             return sum ;
         });

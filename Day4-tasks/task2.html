@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>document</title>
     <style>
         table {
             border: 2px solid red;
+            margin: 10px auto;
         }
-
         td {
             border: 1px solid red;
         }
     </style>
 </head>
-
 <body>
     <table id="table">
         <thead>
@@ -30,17 +29,14 @@
         </tbody>
     </table>
     <script>
-
-        let input = prompt("Enter Your Values").split(",").map(Number);
-        console.log(input);
+        let input = prompt("Enter Your Values separated by commas").split(",").map(Number);
+        console.log(input); //for testing
         let table1 = document.getElementById("table").getElementsByTagName("tbody")[0];
         table1.innerHTML = '';
-        let rows =input.map(function (number) {
+        let rows =input.map( (number) => {
             return `<tr><td>${number}</td></tr>`;
         }).join('');
-
         table1.innerHTML = rows;
-
     </script>
 </body>
 
