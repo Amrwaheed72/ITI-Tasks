@@ -5,67 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>document</title>
-    <style>
-        .output {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        input {
-            margin: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="./task5.css">
 </head>
 
 <body>
-    <h1>Registration Form</h1>
-    <form id="registrationForm">
-        <div>
-            <label for="name">Enter your name:</label>
-            <input type="text" id="name" name="name" required>
+
+    <h2>Sign in Form</h2>
+    <form>
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="age">Enter Your Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label id="gender-choose">Choose Your Gender:</label><br>
+        <div class="gender-selection">
+            <input type="radio" id="male" name="gender" value="male" required>
+                <img src="./male.jpg" alt="Male">
+            <input type="radio" id="female" name="gender" value="female" required>
+                <img src="./female.jpg" alt="Female">
         </div>
-        <div>
-            <label for="age">Enter your age:</label>
-            <input type="number" id="age" name="age" required>
-        </div>
-        <div>
-            <label>Gender:</label>
-            <input type="radio" id="male" name="gender" value="Male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label>
-        </div>
-        <div>
-            <label for="color">Select a color:</label>
-            <select id="color" name="color" required>
-                <option value="red">Red</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
-                <option value="pink">Pink</option>
-                <option value="purple">Purple</option>
-            </select>
-        </div>
-        <div>
-            <button type="button" onclick="register()">Register</button>
-        </div>
+        <label for="color">Choose Color:</label>
+        <select id="color" name="color" required>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        <br>
+        <button type="submit" onclick="handleSubmit(event)">Submit</button>
     </form>
-    <div id="output" class="output"></div>
-    <script>
-        register=()=> {
-            const name = document.getElementById('name').value;
-            const age = document.getElementById('age').value;
-            const gender = document.querySelector('input[name="gender"]:checked')?.value;
-            const color = document.getElementById('color').value;
-            if (!name || !age || !gender || !color) {
-                alert("Please fill out all fields.");
-                return;
-            }
-            const outputDiv = document.getElementById('output');
-            outputDiv.style.color = color;
-            outputDiv.textContent = `Hello, ${name}! You selected ${gender}.`;
-        }
-    </script>
+<script src="./task5.js"></script>
 </body>
 
 </html>

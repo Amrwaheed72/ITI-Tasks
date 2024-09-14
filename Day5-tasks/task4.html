@@ -11,6 +11,8 @@
             font-size: 3em;
             margin-top: 20%;
             transition: background-image 1s ease;
+            background-size:cover;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
@@ -26,7 +28,8 @@
             './عصفور1.jpeg', './عصفور2.jpeg', './عفصور3.jpeg',
             './عفصور4.jpeg', './عفصور6.jpeg'
         ];
-        countDown=()=> {
+        countDown = () => {
+            countdownElement.style.color = 'red';
             countdownElement.textContent = countDownValue;
             document.body.style.backgroundImage = `url(${images[(10 - countDownValue) % images.length]})`;
             if (countDownValue === 0) {

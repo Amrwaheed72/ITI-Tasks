@@ -1,34 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>document</title>
 </head>
 <body>
+    <button onclick="getNames()">Enter Names</button>
+    <button onclick="generateRandomNames()">Generate Random Names</button>
+    <p id="result"></p>
+
     <script>
-        document.writeln("<h1>Bottle game</h1>")
-        document.writeln("<h3>Enter 5 names to generate two random names!</h3>")
-
         let names = [];
-        for (let i = 0; i < 5; i++) {
-            let name = prompt(`Enter name ${i + 1}:`);
-            names.push(name);
+
+        function getNames() {
+            let input = prompt("Enter names separated by commas:");
+            if (input) {
+                names = input.split(',').map(name => name.trim());
+                alert("Names entered successfully!");
+            }
         }
 
-        getRandomNames=(names)=> {
-            let name1, name2;
+        function generateRandomNames() {
+            if (names.length < 2) {
+                alert("Please enter at least two names.");
+                return;
+            }
+            let randomIndex1 = Math.floor(Math.random() * names.length);
+            let randomIndex2;
             do {
-                name1 = names[Math.floor(Math.random() * names.length)];
-                name2 = names[Math.floor(Math.random() * names.length)];
-            } while (name1 === name2);
-            return [name1, name2];
-        }
+                randomIndex2 = Math.floor(Math.random() * names.length);
+            } while (randomIndex1 === randomIndex2);
 
-        const [name1, name2] = getRandomNames(names);
-        document.writeln("<h2 style='color: red; font-weight: bold;'>" + name1 + ' ' + name2 + "</h2>")
+            let randomNames = [names[randomIndex1], names[randomIndex2]];
+            document.getElementById("result").innerText = `Random Names: ${randomNames.join(', ')}`;
+        }
     </script>
 </body>
-
 </html>

@@ -1,0 +1,27 @@
+body {
+    font-family:sans-serif;
+    margin: 20px;
+}
+#age{
+    margin-left: 14px;
+}
+input[type="text"],
+input[type="number"],
+select {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+.gender-selection {
+    margin-bottom: 20px;
+}
+
+.gender-selection img {
+    width: 200px;
+    height: 300px;
+    margin-right: 10px;
+}

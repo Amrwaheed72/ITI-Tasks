@@ -45,31 +45,40 @@
         </div>
         <div class="controlling">
             <hr>
-            <input type="button" value="<" onclick="next()"/>
-            <input type="button" value="play" onclick="start()"/>
-            <input type="button" value="stop" onclick="stop()"/>
-            <input type="button" value=">" onclick="previous()"/>
+            <input type="button" value="<" onclick="next()" id="nextButton" />
+            <input type="button" value="play" onclick="start()" id="playButton" />
+            <input type="button" value="stop" onclick="stop()" id="stopButton" />
+            <input type="button" value=">" onclick="previous()" id="prevButton" />
         </div>
     </div>
     <script>
-        let image = ["./عصفور1.jpeg", "./عصفور2.jpeg", "./عفصور3.jpeg", "./عفصور4.jpeg", "./عفصور5.jpeg", "./عفصور6.jpeg"];
+        const image = ["./عصفور1.jpeg", "./عصفور2.jpeg", "./عفصور3.jpeg", "./عفصور4.jpeg", "./عفصور5.jpeg", "./عفصور6.jpeg"];
         let i = 0;
-        let t;
-        next=()=> {
+        let t = null;
+        next = () => {
             i++;
             if (i >= image.length) i = 0;
             document.getElementById('myimg').src = image[i];
         }
-        previous=()=> {
+        previous = () => {
             i--;
             if (i < 0) i = image.length - 1;
             document.getElementById('myimg').src = image[i];
         }
-        start=()=> {
-            t = setInterval(next, 500);
+        start = () => {
+            if (!t) {
+                t = setInterval(next, 500);
+                document.getElementById('nextButton').disabled = true;
+                document.getElementById('prevButton').disabled = true;
+            }
         }
-        stop=()=> {
-            clearInterval(t);
+        stop = () => {
+            if (t) {
+                clearInterval(t);
+                t = null;
+                document.getElementById('nextButton').disabled = false;
+                document.getElementById('prevButton').disabled = false;
+            }
         }
     </script>
 </body>
