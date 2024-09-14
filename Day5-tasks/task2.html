@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="UTF-8">
 
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,16 @@
     <title>document</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            margin: 40px;
+            font-family:sans-serif;
+            margin: 10px;
         }
-
+        h1{
+            border-bottom:  2px solid black;
+            padding-bottom: 20px;
+        }
         a {
-            padding: 10px 20px;
+            padding: 10px;
+            margin:20px 5px;
             background-color: black;
             color: white;
             text-decoration: none;
@@ -23,57 +26,9 @@
 </head>
 
 <body>
-
-    <a href="./newTap.html" onclick="openNewTap()">Click to open typing window</a>
-    <script>
-        openNewTap = () => {
-            const newTap = window.open('', '', `width=${window.innerWidth / 3},height=${window.innerHeight / 3}`);
-            newTap.document.write(`
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>document</title>
-                <style>
-                    body {
-                        font-family: Arial, sans-serif;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100vh;
-                        margin: 0;
-                    }
-                    .typing {
-                        font-size: 24px;
-                        font-weight: bold;
-                    }
-                </style>
-            </head>
-            <body>
-                <div class="typing"></div>
-                <script>
-                    const message = "This text is typed letter by letter, then the window will close.";
-                    const typingSpeed = 100;
-                    let index = 0;
-                    function typing() {
-                        if (index < message.length) {
-                            document.getElementById('typing').textContent += message.charAt(index);
-                            index++;
-                            setTimeout(typing, typingSpeed);
-                        } else {
-                            setTimeout(() => window.close(), 1000);
-                        }
-                    }
-                    window.onload = typing;
-    </script>
-</body>
-
-</html>
-`);
-newTap.document.close();
-}
-
+    <h1>Typing a Message</h1>
+    <a onclick="openNewTap()">Click to open typing window</a>
+    <script src="./task2.js"></script>
 </body>
 
 </html>
