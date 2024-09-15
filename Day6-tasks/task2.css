@@ -1,0 +1,22 @@
+table {
+    margin: 20px auto;
+    width: 600px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+#searchInput,
+#newsInput,
+button {
+    margin: 10px;
+}
