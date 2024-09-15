@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Form</title>
+    <link rel="stylesheet" href="task3.css">
+</head>
+
+<body>
+    <script src="task3.1.js"></script>
+    <div class="container">
+        <h2>Exam Registration Form</h2>
+        <form onsubmit="handleSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="examType">Type of Exam:</label>
+            <select id="examType" name="examType" required>
+                <option value="Js">Js</option>
+                <option value="CSS">CSS</option>
+                <option value="React">React</option>
+                <option value="Node">Node</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <button type="submit">Submit</button>
+        </form>
+        <script src="task3.js"></script>
+</body>
+
+</html>

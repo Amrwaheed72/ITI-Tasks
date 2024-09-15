@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 60px;
+    text-align: center;
+}
+
+input {
+    width: 700px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    font-size: 17px;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:nth-child(odd) {
+    background: #f1f1f1;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+    margin-left: -330px;
+}
+
+li span {
+    flex-grow: 1;
+}
+
+li button {
+    background: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background: #c82333;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+#doneList li {
+    text-decoration: line-through;
+    color: #888;
+}

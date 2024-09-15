@@ -1,77 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title></title>
-    <style>
-        .mainDiv {
-            width: 800px;
-            border: 2px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .mainImage {
-            width: 600px;
-            margin: 10px;
-            margin: 10px auto;
-        }
-
-        .controlling {
-            padding: 15px;
-            margin: 10px auto;
-            text-align: center;
-        }
-
-        input {
-            width: 100px;
-            padding: 5px;
-            font-weight: bold;
-            margin-inline: 10px;
-        }
-
-        img {
-            width: 400px;
-            height: 400px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="task3.css">
 </head>
 
 <body>
-    <div class="mainDiv">
-        <div class="mainImage">
-            <img src="./عصفور1.jpeg" id="myimg" />
-        </div>
-        <div class="controlling">
-            <hr>
-            <input type="button" value="<" onclick="next()"/>
-            <input type="button" value="play" onclick="start()"/>
-            <input type="button" value="stop" onclick="stop()"/>
-            <input type="button" value=">" onclick="previous()"/>
-        </div>
+    <div class="box" id="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+        voluptate doloribus modi odit labore at illum aspernatur accusamus sit, vitae optio ab perferendis voluptatum
+        eaque nesciunt quis tempore, reiciendis sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+        voluptatibus nihil dignissimos exercitationem blanditiis error repudiandae eaque voluptates laudantium, corporis
+        doloremque officiis quam dicta nisi ipsam tenetur mollitia, iure cum. Quod voluptate doloribus modi odit labore
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam unde rerum labore asperiores accusantium quos
+        earum commodi aspernatur repudiandae. Necessitatibus eaque magni exercitationem unde similique animi distinctio
+        aliquam eum veritatis!
+
     </div>
-    <script>
-        let image = ["./عصفور1.jpeg", "./عصفور2.jpeg", "./عفصور3.jpeg", "./عفصور4.jpeg", "./عفصور5.jpeg", "./عفصور6.jpeg"];
-        let i = 0;
-        let t;
-        next=()=> {
-            i++;
-            if (i >= image.length) i = 0;
-            document.getElementById('myimg').src = image[i];
-        }
-        previous=()=> {
-            i--;
-            if (i < 0) i = image.length - 1;
-            document.getElementById('myimg').src = image[i];
-        }
-        start=()=> {
-            t = setInterval(next, 500);
-        }
-        stop=()=> {
-            clearInterval(t);
-        }
-    </script>
+    <table>
+        <tr>
+            <th>Font Family</th>
+            <th>Text Align</th>
+            <th>Line Height</th>
+            <th>Letter Spacing</th>
+            <th>Font Color</th>
+            <th>Text Transform</th>
+            <th>Text Decoration</th>
+            <th>Text Border</th>
+            <th>Border Color</th>
+            <th>Font Size</th>
+        </tr>
+        <tr>
+            <td>
+                <label><input type="radio" name="fontFamily" value="Arial" onclick="applyStyle()"> Arial</label><br>
+                <label><input type="radio" name="fontFamily" value="Verdana" onclick="applyStyle()"> Verdana</label><br>
+                <label><input type="radio" name="fontFamily" value="Times New Roman" onclick="applyStyle()"> Times New
+                    Roman</label><br>
+                <label><input type="radio" name="fontFamily" value="Courier New" onclick="applyStyle()"> Courier
+                    New</label><br>
+                <label><input type="radio" name="fontFamily" value="Georgia" onclick="applyStyle()"> Georgia</label><br>
+                <label><input type="radio" name="fontFamily" value="Tahoma" onclick="applyStyle()"> Tahoma</label><br>
+                <label><input type="radio" name="fontFamily" value="Trebuchet MS" onclick="applyStyle()"> Trebuchet
+                    MS</label><br>
+                <label><input type="radio" name="fontFamily" value="Comic Sans MS" onclick="applyStyle()"> Comic Sans
+                    MS</label><br>
+                <label><input type="radio" name="fontFamily" value="Roboto" onclick="applyStyle()"> Roboto</label><br>
+            </td>
+
+            <td>
+                <label><input type="radio" name="textAlign" value="left" onclick="applyStyle()"> Left</label><br>
+                <label><input type="radio" name="textAlign" value="center" onclick="applyStyle()"> Center</label><br>
+                <label><input type="radio" name="textAlign" value="right" onclick="applyStyle()"> Right</label><br>
+                <label><input type="radio" name="textAlign" value="justify" onclick="applyStyle()"> Justify</label><br>
+            </td>
+            <td>
+                <label><input type="radio" name="lineHeight" value="normal" onclick="applyStyle()"> Normal</label><br>
+                <label><input type="radio" name="lineHeight" value="1.5" onclick="applyStyle()"> 1.5</label><br>
+                <label><input type="radio" name="lineHeight" value="2" onclick="applyStyle()"> 2</label><br>
+                <label><input type="radio" name="lineHeight" value="2.5" onclick="applyStyle()"> 2.5</label><br>
+            </td>
+            <td>
+                <label><input type="radio" name="letterSpacing" value="normal" onclick="applyStyle()">
+                    Normal</label><br>
+                <label><input type="radio" name="letterSpacing" value="-1px" onclick="applyStyle()"> -1px</label><br>
+                <label><input type="radio" name="letterSpacing" value="2px" onclick="applyStyle()"> 2px</label><br>
+                <label><input type="radio" name="letterSpacing" value="3px" onclick="applyStyle()"> 3px</label><br>
+            </td>
+            <td>
+                <label><input type="radio" name="fontColor" value="black" onclick="applyStyle()"> Black</label><br>
+                <label><input type="radio" name="fontColor" value="blue" onclick="applyStyle()"> Blue</label><br>
+                <label><input type="radio" name="fontColor" value="red" onclick="applyStyle()"> Red</label><br>
+                <label><input type="radio" name="fontColor" value="green" onclick="applyStyle()"> Green</label><br>
+            </td>
+            <td>
+                <label><input type="radio" name="textTransform" value="none" onclick="applyStyle()"> None</label><br>
+                <label><input type="radio" name="textTransform" value="uppercase" onclick="applyStyle()">
+                    Uppercase</label><br>
+                <label><input type="radio" name="textTransform" value="lowercase" onclick="applyStyle()">
+                    Lowercase</label><br>
+                <label><input type="radio" name="textTransform" value="capitalize" onclick="applyStyle()">
+                    Capitalize</label><br>
+            </td>
+            <td>
+                <label><input type="radio" name="textDecoration" value="none" onclick="applyStyle()"> None</label><br>
+                <label><input type="radio" name="textDecoration" value="underline" onclick="applyStyle()">
+                    Underline</label><br>
+                <label><input type="radio" name="textDecoration" value="line-through" onclick="applyStyle()">
+                    Line-through</label><br>
+                <label><input type="radio" name="textDecoration" value="overline" onclick="applyStyle()">
+                    Overline</label><br>
+            </td>
+            <td>
+                <label><input type="radio" name="textBorder" value="none" onclick="applyStyle()"> None</label><br>
+                <label><input type="radio" name="textBorder" value="4px solid" onclick="applyStyle()"> Solid
+                </label><br>
+                <label><input type="radio" name="textBorder" value="4px dashed" onclick="applyStyle()"> Dashed
+                    Blue</label><br>
+                <label><input type="radio" name="textBorder" value="4px dotted" onclick="applyStyle()"> Dotted
+                    Red</label><br>
+            </td>
+            <td>
+                <label><input type="radio" name="borderColor" value="black" onclick="applyStyle()"> Black</label><br>
+                <label><input type="radio" name="borderColor" value="blue" onclick="applyStyle()"> Blue</label><br>
+                <label><input type="radio" name="borderColor" value="red" onclick="applyStyle()"> Red</label><br>
+                <label><input type="radio" name="borderColor" value="green" onclick="applyStyle()"> Green</label><br>
+            </td>
+            <td>
+                <label><input type="radio" name="fontSize" value="12px" onclick="applyStyle()"> 12px</label><br>
+                <label><input type="radio" name="fontSize" value="14px" onclick="applyStyle()"> 14px</label><br>
+                <label><input type="radio" name="fontSize" value="16px" onclick="applyStyle()"> 16px</label><br>
+                <label><input type="radio" name="fontSize" value="18px" onclick="applyStyle()"> 18px</label><br>
+                <label><input type="radio" name="fontSize" value="20px" onclick="applyStyle()"> 20px</label><br>
+                <label><input type="radio" name="fontSize" value="22px" onclick="applyStyle()"> 22px</label><br>
+                <label><input type="radio" name="fontSize" value="24px" onclick="applyStyle()"> 24px</label><br>
+                <label><input type="radio" name="fontSize" value="26px" onclick="applyStyle()"> 26px</label><br>
+                <label><input type="radio" name="fontSize" value="28px" onclick="applyStyle()"> 28px</label><br>
+                <label><input type="radio" name="fontSize" value="30px" onclick="applyStyle()"> 30px</label><br>
+            </td>
+
+        </tr>
+    </table>
+
+    <script src="task3.js"></script>
 </body>
 
 </html>
