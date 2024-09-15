@@ -1,0 +1,27 @@
+body {
+    font-family:sans-serif;
+    margin: 20px;
+}
+form {
+    max-width: 500px;
+}
+.contaner {
+    padding: 20px;
+}
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0px;
+}
+input[type="checkbox"] {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+button {
+    padding: 10px 20px;
+    margin: 20px ;
+}
+.error {
+    color: red;
+    font-size: 0.875em;
+}

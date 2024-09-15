@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+
+<body>
+    <h1>News Table</h1>
+    <input type="text" id="newsInput" placeholder="Enter your news here">
+    <div>
+        <label><input type="radio" name="newsType" value="Social"> Social</label>
+        <label><input type="radio" name="newsType" value="Sports"> Sports</label>
+        <label><input type="radio" name="newsType" value="Politics"> Politics</label>
+    </div>
+    <button onclick="addNews()">Add News</button>
+    <button onclick="countRows()">Count Rows</button>
+    <input type="text" id="searchInput" placeholder="Search news" onkeyup="searchNews()">
+    <p id="rowCount"></p>
+    <table id="newsTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>News</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="task1.js"></script>
+</body>
+
+</html>
