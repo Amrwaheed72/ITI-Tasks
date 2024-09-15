@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="./task5.css">
+</head>
+
+<body>
+
+    <h2>Sign in Form</h2>
+    <form>
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="age">Enter Your Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label id="gender-choose">Choose Your Gender:</label><br>
+        <div class="gender-selection">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <img src="./male.jpg" alt="Male">
+            <input type="radio" id="female" name="gender" value="female" required>
+            <img src="./female.jpg" alt="Female">
+        </div>
+        <label for="color">Choose Color:</label>
+        <select id="color" name="color" required>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        <br>
+        <button type="submit" onclick="handleSubmit(event)">Submit</button>
+    </form>
+    <script src="./task5.js"></script>
+</body>
+
+</html>

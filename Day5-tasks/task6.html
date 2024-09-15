@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Name Generator</title>
+</head>
+
+<body>
+    <textarea id="namesInput" rows="4" cols="50" placeholder="Enter names separated by commas"></textarea>
+    <br>
+    <button onclick="getNames()">Submit Names</button>
+    <button onclick="generateRandomNames()">Generate Random Names</button>
+    <p id="result"></p>
+    <script>
+        let names = [];
+        function getNames() {
+            let input = document.getElementById('namesInput').value;
+            if (input) {
+                names = input.split(',').map(name => name.trim());
+                alert("Names entered successfully!");
+            }
+        }
+        function generateRandomNames() {
+            if (names.length < 2) {
+                alert("Please enter at least two names.");
+                return;
+            }
+            let randomIndex1 = Math.floor(Math.random() * names.length);
+            let randomIndex2;
+            do {
+                randomIndex2 = Math.floor(Math.random() * names.length);
+            } while (randomIndex1 === randomIndex2);
+            let randomNames = [names[randomIndex1], names[randomIndex2]];
+            document.getElementById("result").innerText = `Random Names: ${randomNames.join(', ')}`;
+        }
+    </script>
+</body>
+
+</html>
