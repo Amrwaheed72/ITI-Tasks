@@ -1,2 +1,1 @@
-my daily tasks for ITI summer training<br>
-<h1>all the HTML&CSS&Js files are Merged in the HTML files</h1>
+<h1>my daily tasks for ITI summer training</h1><br>
