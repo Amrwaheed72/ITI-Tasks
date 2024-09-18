@@ -45,7 +45,78 @@
             <button type="button" id="clearButton">Clear</button>
         </div>
     </form>
-    <script src="task2.js"></script>
+
+    <script>
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCheckedHobbies() {
+            const hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+            return Array.from(hobbies).map(hobby => hobby.value).join(", ");
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const name = document.getElementById('name');
+            name.focus();
+
+            const country = document.getElementById('country');
+            const zip = document.getElementById('zip');
+            country.addEventListener('change', (event) => {
+                const selectedOption = event.target.options[event.target.selectedIndex];
+                zip.value = selectedOption.getAttribute('data-zipcode') || '';
+            });
+
+            const form = document.getElementById('userForm');
+            form.addEventListener('submit', (event) => {
+                let valid = true;
+
+                if (name.value.trim() === '') {
+                    document.getElementById('nameError').textContent = 'Please enter your name.';
+                    valid = false;
+                } else {
+                    document.getElementById('nameError').textContent = '';
+                }
+
+                const email = document.getElementById('email');
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email.value.trim())) {
+                    document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                    valid = false;
+                } else {
+                    document.getElementById('emailError').textContent = '';
+                }
+
+                const hobbies = document.querySelectorAll('input[name="hobbies"]');
+                const atLeastOneHobbySelected = Array.from(hobbies).some(hobby => hobby.checked);
+                if (!atLeastOneHobbySelected) {
+                    alert('Please select at least one hobby.');
+                    valid = false;
+                }
+                if (valid) {
+                    setCookie('name', name.value, 7);
+                    setCookie('country', country.value, 7);
+                    setCookie('zip', zip.value, 7);
+                    setCookie('email', email.value, 7);
+                    setCookie('hobbies', getCheckedHobbies(), 7);
+                    window.location.href = './task2.1.html';
+                }
+
+                event.preventDefault();
+            });
+
+            const clear = document.getElementById('clearButton');
+            clear.addEventListener('click', () => {
+                if (confirm('Are you sure you want to clear the form?')) {
+                    form.reset();
+                    zip.value = '';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

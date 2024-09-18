@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+</head>
+
+<body>
+    <h2>User Information</h2>
+    <div>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Country:</strong> <span id="displayCountry"></span></p>
+        <p><strong>Zip Code:</strong> <span id="displayZip"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Hobbies:</strong> <span id="displayHobbies"></span></p>
+    </div>
+
+    <script>
+        // Function to get cookies by name
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Display data stored in cookies
+        document.getElementById('displayName').textContent = getCookie('name');
+        document.getElementById('displayCountry').textContent = getCookie('country');
+        document.getElementById('displayZip').textContent = getCookie('zip');
+        document.getElementById('displayEmail').textContent = getCookie('email');
+        document.getElementById('displayHobbies').textContent = getCookie('hobbies');
+    </script>
+</body>
+
+</html>
