@@ -1,4 +1,3 @@
-// Function to set cookies
 function setCookie(name, value, days) {
     const date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -6,7 +5,6 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-// Function to get cookies by name
 function getCookie(name) {
     const nameEQ = name + "=";
     const ca = document.cookie.split(';');
@@ -17,7 +15,6 @@ function getCookie(name) {
     return null;
 }
 
-// Function to store form data in cookies
 function storeFormDataInCookies(name, age, gender, color) {
     setCookie('name', name, 7); // Store for 7 days
     setCookie('age', age, 7);
@@ -25,7 +22,6 @@ function storeFormDataInCookies(name, age, gender, color) {
     setCookie('color', color, 7);
 }
 
-// Function to retrieve and use cookie data to display it
 function displayFromCookies() {
     const name = getCookie('name');
     const age = getCookie('age');

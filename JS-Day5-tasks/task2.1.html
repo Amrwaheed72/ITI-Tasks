@@ -18,7 +18,6 @@
     </div>
 
     <script>
-        // Function to get cookies by name
         function getCookie(name) {
             const nameEQ = name + "=";
             const ca = document.cookie.split(';');
@@ -29,7 +28,6 @@
             return null;
         }
 
-        // Display data stored in cookies
         document.getElementById('displayName').textContent = getCookie('name');
         document.getElementById('displayCountry').textContent = getCookie('country');
         document.getElementById('displayZip').textContent = getCookie('zip');
