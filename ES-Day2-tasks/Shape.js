@@ -1,17 +1,19 @@
 class Shape {
-    #color;
     constructor(color) {
-        this.#color = color;
+        this.color = color;
     }
-    get Color() {
-        return this.#color;
+
+    get color() {
+        return this.color;
     }
-    set Color(newColor) {
-        this.#color = newColor;
+
+    set color(newColor) {
+        this.color = newColor;
     }
-    DrawShape() {
-        console.log(`Shape color is: ${this.Color}`);
+
+    drawShape() {
+        console.log(`Shape color is: ${this.color}`);
     }
 }
 
-export default Shape ;
+export default Shape;

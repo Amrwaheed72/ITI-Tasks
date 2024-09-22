@@ -9,8 +9,12 @@ class Circle extends Shape {
     }
 
     getArea() {
-        this.DrawShape();
         return Math.PI * Math.pow(this.radius, 2);
+    }
+
+    drawCircle() {
+        super.drawShape();
+        console.log(`Circle at (${this.x}, ${this.y}) with radius ${this.radius}`);
     }
 }
 

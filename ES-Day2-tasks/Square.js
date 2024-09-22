@@ -1,4 +1,4 @@
-import Shape  from './Shape.js';
+import Shape from './Shape.js';
 
 class Rectangle extends Shape {
     constructor(color, width, height) {
@@ -8,14 +8,23 @@ class Rectangle extends Shape {
     }
 
     getArea() {
-        this.DrawShape();
         return this.width * this.height;
+    }
+
+    drawRectangle() {
+        super.drawShape();
+        console.log(`Rectangle with width ${this.width} and height ${this.height}`);
     }
 }
 
 class Square extends Rectangle {
     constructor(color, side) {
         super(color, side, side);
+    }
+
+    drawSquare() {
+        super.drawRectangle();
+        console.log(`Square with side ${this.width}`);
     }
 }
 
