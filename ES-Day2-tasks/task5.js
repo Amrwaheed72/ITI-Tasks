@@ -1,19 +1,28 @@
-let numbers = [50, 30, 80, 10, 20, 55, 23, 78, 45, 90, 12, 67];
+function* generateId() {
+    let id = 1;
+    while (id <= 10) {
+        yield id++;
+    }
+}
 
-let ascending = numbers.sort((a, b) => a - b);
-console.log('Ascending:', ascending);
+const iterableObject = {
+    data: [1, 2, 3, 4, 5],
 
-let descending = numbers.sort((a, b) => b - a);
-console.log('Descending:', descending);
+    [Symbol.iterator]() {
+        let index = 0;
+        return {
+            next: () => {
+                if (index < this.data.length) {
+                    return { value: this.data[index++], done: false };
+                } else {
+                    return { done: true };
+                }
+            }
+        };
+    }
+}
 
-
-
-let filteredNumbers = numbers.filter(number => number > 50);
-console.log('Numbers larger than 50:', filteredNumbers);
-
-let maxNumber = Math.max(...numbers);
-
-let minNumber = Math.min(...numbers);
-
-console.log('Max Number:', maxNumber);
-console.log('Min Number:', minNumber);
+export {
+    generateId,
+    iterableObject
+};
