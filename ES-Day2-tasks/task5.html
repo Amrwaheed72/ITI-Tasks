@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script type="module">
+        import { generateId, iterableObject } from './task5.js';
+
+        const idGen = generateId();
+        console.log(`New ID: ${idGen.next().value}`);
+        console.log(`New ID: ${idGen.next().value}`);
+        console.log(`New ID: ${idGen.next().value}`);
+
+        for (const value of iterableObject) {
+            console.log(`Iterated value: ${value}`);
+        }
+    </script>
 </body>
 </html>
