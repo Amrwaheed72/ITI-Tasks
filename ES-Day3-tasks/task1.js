@@ -1,19 +1,69 @@
-let numbers = [50, 30, 80, 10, 20, 55, 23, 78, 45, 90, 12, 67];
+const container = document.getElementById("container");
+const userDataSection = document.getElementById("userData");
+const errorMsg = document.getElementById("errorMsg");
 
-let ascending = numbers.sort((a, b) => a - b);
-console.log('Ascending:', ascending);
+window.onload = () => {
+    fetchData();
+};
 
-let descending = numbers.sort((a, b) => b - a);
-console.log('Descending:', descending);
+// Fetch and display all users
+const fetchData = async () => {
+    try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        if (!res.ok) throw new Error(`Error: ${res.statusText}`);
 
+        const users = await res.json();
+        renderUserButtons(users);
+    } catch (error) {
+        showError("Failed to fetch user data. Please try again later.");
+        console.error(error);
+    }
+};
 
+const renderUserButtons = (users) => {
+    container.innerHTML = ''; 
+    users.forEach((user, index) => {
+        const button = document.createElement('button');
+        button.innerText = user.name;
+        button.className = 'name';
+        button.id = index;
+        button.setAttribute('aria-label', `View details for ${user.name}`);
+        button.onclick = () => fetchUser(index);
+        container.appendChild(button);
+    });
+};
 
-let filteredNumbers = numbers.filter(number => number > 50);
-console.log('Numbers larger than 50:', filteredNumbers);
+const fetchUser = async (userId) => {
+    try {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId + 1}`);
+        if (!res.ok) throw new Error(`Error: ${res.statusText}`);
 
-let maxNumber = Math.max(...numbers);
+        const user = await res.json();
+        renderUserData(user);
+    } catch (error) {
+        showError("Failed to fetch user details. Please try again later.");
+        console.error(error);
+    }
+};
 
-let minNumber = Math.min(...numbers);
+const renderUserData = (user) => {
+    userDataSection.innerHTML = `
+        <ul>
+            <li class="userData">Name: ${user.name}</li>
+            <li class="userData">Username: ${user.username}</li>
+            <li class="userData">Email: ${user.email}</li>
+            <li class="userData">Website: ${user.website}</li>
+            <li class="userData">Phone Number: ${user.phone}</li>
+            <li class="userData">Location</li>
+            <ul class="userData">
+                <li class="userData">Street: ${user.address.street}</li>
+                <li class="userData">City: ${user.address.city}</li>
+                <li class="userData">Suite: ${user.address.suite}</li>
+            </ul>
+        </ul>
+    `;
+};
 
-console.log('Max Number:', maxNumber);
-console.log('Min Number:', minNumber);
+const showError = (message) => {
+    errorMsg.innerText = message;
+};

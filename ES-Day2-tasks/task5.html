@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Module Example</title>
 </head>
+
 <body>
     <script type="module">
         import { generateId, iterableObject } from './task5.js';
-
         const idGen = generateId();
-        console.log(`New ID: ${idGen.next().value}`);
-        console.log(`New ID: ${idGen.next().value}`);
-        console.log(`New ID: ${idGen.next().value}`);
-
+        for (let i = 0; i < 4; i++) {
+            console.log(`New ID: ${idGen.next().value}`);
+        }
         for (const value of iterableObject) {
             console.log(`Iterated value: ${value}`);
         }
     </script>
 </body>
+
 </html>

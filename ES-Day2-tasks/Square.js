@@ -1,6 +1,6 @@
-import Rectangle from './Rectangle'
+import Rectangle from './Rectangle.js'
 
-class Square extends Rectangle {
+export class Square extends Rectangle {
     constructor(color, side) {
         super(color, side, side);
     }

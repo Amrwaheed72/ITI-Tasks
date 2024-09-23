@@ -17,5 +17,4 @@ class Circle extends Shape {
         console.log(`Circle at (${this.x}, ${this.y}) with radius ${this.radius}`);
     }
 }
-
 export default Circle

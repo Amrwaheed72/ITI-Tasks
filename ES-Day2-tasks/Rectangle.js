@@ -16,4 +16,4 @@ class Rectangle extends Shape {
     }
 }
 
-export default Rectangle;
+export default Rectangle

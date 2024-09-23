@@ -1,7 +1,7 @@
+// Generator function that yields numbers from 1 to 10
 function* generateId() {
-    let id = 1;
-    while (id <= 10) {
-        yield id++;
+    for (let id = 1; id <= 10; id++) {
+        yield id;
     }
 }
 
@@ -11,18 +11,11 @@ const iterableObject = {
     [Symbol.iterator]() {
         let index = 0;
         return {
-            next: () => {
-                if (index < this.data.length) {
-                    return { value: this.data[index++], done: false };
-                } else {
-                    return { done: true };
-                }
-            }
+            next: () => ({
+                value: this.data[index],
+                done: index++ >= this.data.length
+            })
         };
     }
 }
-
-export {
-    generateId,
-    iterableObject
-};
+export { generateId, iterableObject };

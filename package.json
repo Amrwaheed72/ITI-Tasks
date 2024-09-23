@@ -1,13 +1,13 @@
 {
-  "name": "es-day2-tasks",
+  "name": "iti-tasks",
   "type": "module",
   "version": "1.0.0",
-  "main": "base.js",
+  "description": "<h1>my daily tasks for ITI summer training</h1><br>",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }

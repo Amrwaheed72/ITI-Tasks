@@ -1,6 +1,6 @@
 import Rectangle from './Rectangle.js';
 import Square from './Square.js'
-import { Circle } from './Circle.js';
+import Circle from './Circle.js';
 
 const rectangle = new Rectangle('Red', 5, 10);
 const square = new Square('Blue', 4);

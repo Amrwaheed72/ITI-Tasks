@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #formContainer {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .button-container {
+            text-align: right;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="formContainer">
+        <form id="projectForm">
+            <div id="inputFieldsContainer">
+                <div class="input-group">
+                    <label for="key">Key Name</label>
+                    <input type="text" id="key" name="key" required placeholder="e.g., projectId, projectName">
+                </div>
+                <div class="input-group">
+                    <label for="value">Value</label>
+                    <input type="text" id="value" name="value" required placeholder="Enter value for key">
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="button" id="addPairBtn">Add More Key-Value Pairs</button>
+                <button type="submit">Submit Project</button>
+            </div>
+            <div class="error" id="errorMsg"></div>
+        </form>
+    </div>
+
+    <div class="output" id="outputContainer"></div>
+
+    <script src="./task3.js"></script>
+
+</body>
+
+</html>
