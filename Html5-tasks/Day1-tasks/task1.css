@@ -20,6 +20,7 @@ body {
     position: relative;
     transition: transform 3s;
     background-image: linear-gradient(to right , rgb(146, 216, 246) , rgb(146, 127, 145));
+    box-shadow: 5px 5px 20px black;
 
 }
 
@@ -107,6 +108,7 @@ body {
 
 .image-gallery img.active {
     transform: scale(1.8);
+    z-index: 100;
 }
 
 @media (max-width: 1024px) {
