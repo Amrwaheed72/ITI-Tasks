@@ -110,7 +110,8 @@ body {
 }
 
 .register:hover {
-    background-color: #0d7795;;
+    background-color: #0d7795;
+    ;
 }
 
 section {
@@ -134,7 +135,7 @@ section {
 .card {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px black;
     overflow: hidden;
     width: calc(100% - 40px);
     max-width: 300px;
@@ -160,7 +161,8 @@ section {
 
 /* Social media icons */
 .social-icons {
-    display: none;
+    display: flex;
+    /* display: none; */
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -168,18 +170,14 @@ section {
     gap: 10px;
 }
 
-.card:hover .social-icons {
+/* .card:hover .social-icons {
     display: flex;
-}
+} */
 
 .social-icons i {
     font-size: 20px;
-    color: #ff6b6b;
-    transition: color 0.3s ease;
-}
-
-.social-icons i:hover {
     color: #333;
+    transition: color 0.5s ease;
 }
 
 /* Responsive Image Row */
@@ -193,15 +191,18 @@ section {
 .image-card {
     width: 100%;
     max-width: 300px;
+    border: 2px solid rgb(187, 184, 184);
     overflow: hidden;
     margin: 10px;
     position: relative;
 }
 
 .image-card img {
-    height: 160px;
-    opacity: 0.3;
-    transition: opacity 0.3s ease;
+    margin: 5px;
+    height: 200px;
+    border: 2px solid;
+    /* opacity: 0.3; */
+    transition: opacity 0.5s ease;
     width: 100%;
 }
 
@@ -214,13 +215,13 @@ section {
     color: #333;
     font-size: 1rem;
     font-weight: bold;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
-.image-card:hover p {
+/* .image-card:hover p {
     opacity: 1;
-}
+} */
 
 /* Tablet layout (50% width) */
 @media (min-width: 600px) {

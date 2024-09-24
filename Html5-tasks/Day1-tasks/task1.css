@@ -73,11 +73,10 @@ body {
     padding-right: 10px;
     transition: color 0.5s ease;
 }
-
-.text-section p:hover {
-    color: red;
+.text-section p::selection{
+    background-color: red;
+    color: white; 
 }
-
 .text-section p:last-child {
     border-right: none;
 }
@@ -99,16 +98,17 @@ body {
     height: 150px;
     object-fit: cover;
     border: 2px solid #000;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
 .image-gallery img:hover {
     transform: scale(1.08);
+    z-index: 200;
 }
 
 .image-gallery img.active {
-    transform: scale(1.8);
-    z-index: 100;
+    transform: scale(1.2);
+
 }
 
 @media (max-width: 1024px) {
