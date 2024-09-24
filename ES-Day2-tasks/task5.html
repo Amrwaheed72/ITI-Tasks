@@ -12,7 +12,7 @@
         import { generateId, iterableObject } from './task5.js';
         const idGen = generateId();
         for (let i = 0; i < 4; i++) {
-            console.log(`New ID: ${idGen.next().value}`);
+            console.log(`ID: ${idGen.next().value}`);
         }
         for (const value of iterableObject) {
             console.log(`Iterated value: ${value}`);

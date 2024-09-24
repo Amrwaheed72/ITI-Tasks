@@ -1,4 +1,3 @@
-// Generator function that yields numbers from 1 to 10
 function* generateId() {
     for (let id = 1; id <= 10; id++) {
         yield id;

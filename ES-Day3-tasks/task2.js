@@ -11,7 +11,7 @@ loadCountryBtn.onclick = async () => {
         return;
     }
 
-    clearContent(); // Clear previous content before loading new data
+    clearContent(); 
     await fetchCountryData(mainC);
 };
 
