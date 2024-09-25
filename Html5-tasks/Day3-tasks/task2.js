@@ -30,6 +30,5 @@ dropSection.addEventListener('drop', (e) => {
     dropSection.appendChild(draggableElement);
     dropSection.classList.remove('active');
 
-    // Keep the same styles as in the original section
     draggableElement.style.transform = "none";
 });

@@ -69,8 +69,13 @@ body {
 }
 
 video {
-    padding: 10px;
-    max-width: 100%;
+    /* padding: 100px; */
+    max-width: 80%;
     border-radius: 8px;
-    border: 2px solid white;
+    /* border: 2px solid white; */
+    border-radius: 20px;
+}
+video:hover{
+    transform: scale(1.1);
+    transition: all 1s;
 }
