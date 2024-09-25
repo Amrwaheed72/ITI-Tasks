@@ -123,14 +123,40 @@ section {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
+    margin-bottom: 150px;
 }
 
+.vol-1::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    bottom: -180px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 4;
+}
+
+.vol-1::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 2px;
+    background-color: black;
+    bottom: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .activities {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
 
 .card {
     background-color: white;
@@ -217,6 +243,30 @@ section {
     font-weight: bold;
     opacity: 1;
     transition: opacity 0.3s ease;
+}
+.vol-2::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    bottom: -970px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 4;
+}
+
+.vol-2::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 2px;
+    background-color: black;
+    bottom: -970px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* .image-card:hover p {

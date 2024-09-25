@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Task Header */
+.task-header {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    border: 2px solid #ccc;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* ITI Locations Section */
+.iti-locations {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/* Map Image */
+.map {
+    flex: 1;
+}
+
+.map img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Locations List */
+.locations-list {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.locations-list h2 {
+    font-size: 24px;
+    color: #a33;
+}
+
+.locations-list p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.locations-list ul {
+    list-style: none;
+    font-size: 18px;
+}
+
+.locations-list ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.contact-us p {
+    margin-bottom: 10px;
+}
+
+.follow-us .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.follow-us .social-icons a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.follow-us .social-icons a:hover {
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .iti-locations {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .locations-list {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}   
