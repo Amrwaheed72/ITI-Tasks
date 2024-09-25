@@ -188,7 +188,7 @@ section {
 /* Social media icons */
 .social-icons {
     display: flex;
-    /* display: none; */
+    display: none;
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -196,9 +196,9 @@ section {
     gap: 10px;
 }
 
-/* .card:hover .social-icons {
+.card:hover .social-icons {
     display: flex;
-} */
+}
 
 .social-icons i {
     font-size: 20px;
@@ -227,7 +227,7 @@ section {
     margin: 5px;
     height: 200px;
     border: 2px solid;
-    /* opacity: 0.3; */
+    opacity: 0.3;
     transition: opacity 0.5s ease;
     width: 100%;
 }
@@ -241,7 +241,8 @@ section {
     color: #333;
     font-size: 1rem;
     font-weight: bold;
-    opacity: 1;
+    opacity: 0;
+    /* opacity: 1; */
     transition: opacity 0.3s ease;
 }
 .vol-2::before {
@@ -269,9 +270,9 @@ section {
     transform: translateX(-50%);
 }
 
-/* .image-card:hover p {
+.image-card:hover p {
     opacity: 1;
-} */
+}
 
 /* Tablet layout (50% width) */
 @media (min-width: 600px) {
