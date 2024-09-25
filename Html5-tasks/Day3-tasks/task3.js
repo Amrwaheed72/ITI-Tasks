@@ -1,4 +1,3 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 function displayMap() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
