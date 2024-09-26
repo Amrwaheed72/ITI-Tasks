@@ -1,0 +1,157 @@
+.parts .part, select option, select, .content .text-box p, .content, header {
+  padding: 20px;
+}
+
+.parts .part, select, .content .text-box p, header {
+  border-radius: 10px;
+}
+
+.parts .part {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: #3498db;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+@media (max-width: 720px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background-color: #fdf5e6;
+}
+.content .text-box p {
+  background-color: #f9e79f;
+  font-size: 30px;
+}
+.content .text-box .buttons {
+  margin-top: 20px;
+}
+.content .text-box .buttons button,
+.content .text-box .buttons a,
+.content .text-box .buttons input {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.content .text-box .buttons a {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+.content .image-box img {
+  height: auto;
+}
+
+select {
+  font-size: 16px;
+  color: #3498db;
+  background-color: #ecf0f1;
+  border: 2px solid #2c3e50;
+  cursor: pointer;
+  outline: none;
+}
+select:hover {
+  background-color: #bdc3c7;
+}
+select:focus {
+  border-color: #3498db;
+}
+select option {
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.parts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.parts .part {
+  background-color: white;
+}
+.parts .part .icon {
+  font-size: 35px;
+}
+@media (max-width: 720px) {
+  .parts .part .icon {
+    font-size: 30px;
+  }
+}
+.parts .part h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.parts .part .new-badge {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.parts .part .badge {
+  background-color: #7c7a7a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+@media (max-width: 720px) {
+  .image-box {
+    display: none;
+  }
+  .buttons button,
+  .buttons a,
+  .buttons input {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .text-box {
+    grid-column: 1/span 2;
+  }
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .parts {
+    grid-template-columns: 1fr;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=task1.css.map */

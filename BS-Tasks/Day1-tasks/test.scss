@@ -1,0 +1,18 @@
+$bgcolor: red;
+$border: 2px solid $bgcolor;
+
+#mainwrapper{
+    background-color: $bgcolor;
+    #internalwrapper{
+        border: 1ps solid black;
+        p{
+            color: black;
+            &:hover{
+                color:red;
+            }
+            &:active{
+                background-color: yellow;
+            }
+        }
+    }
+}
