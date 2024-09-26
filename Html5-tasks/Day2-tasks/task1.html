@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Movement</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        button {
+            width: 100px;
+            background-color:rgb(240, 130, 130) ;
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            font-size: 25px;
+            border-radius: 10px;
+            color: white;
+        }
+        #squareContainer {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #square {
+            width: 250px;
+            height: 90px;
+            background-color: rgb(240, 130, 130);
+            position: absolute;
+            transition: transform 0.3s ease;
+        }
+        #square:hover {
+            animation-play-state: paused !important;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="stopBtn">Stop</button>
+    </div>
+    <div id="squareContainer">
+        <div id="square"></div>
+    </div>
+    <script src="./task1.js"></script>
+
+</body>
+
+</html>
