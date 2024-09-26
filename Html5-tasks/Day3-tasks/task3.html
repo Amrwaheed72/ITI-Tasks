@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Interface</title>
+    <link rel="stylesheet" href="./task3.css">
+    <script
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB90FxtYG_ybAYXGkz0ybkmkboE2nEbezI"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="button-container">
+            <button onclick="displayMap()">Display Map</button>
+            <button onclick="displayInfo()">Detailed Information</button>
+        </div>
+
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+        <div id="location-info" style="display: none;">
+            <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+            <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+            <p><strong>Accuracy:</strong> <span id="accuracy"></span> meters</p>
+            <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+        </div>
+    </div>
+
+    <script src="task3.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./task4.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="section addition">
+            <h2>ADDITION</h2>
+            <div class="numbers">
+                <span id="add-num1">0</span> + <span id="add-num2">0</span>
+            </div>
+            <div class="arrows">
+                <button onclick="changeNumber('add-num1', 1)">▲</button>
+                <button onclick="changeNumber('add-num1', -1)">▼</button>||
+                <button onclick="changeNumber('add-num2', 1)">▲</button>
+                <button onclick="changeNumber('add-num2', -1)">▼</button>
+            </div>
+            <div class="result" id="add-result">= 0</div>
+        </div>
+        <div class="section multiplication">
+            <h2>MULTIPLICATION</h2>
+            <div class="numbers">
+                <span id="mul-num1">0</span> × <span id="mul-num2">0</span>
+            </div>
+            <div class="arrows">
+                <button onclick="changeNumber('mul-num1', 1)">▲</button>
+                <button onclick="changeNumber('mul-num1', -1)">▼</button>||
+                <button onclick="changeNumber('mul-num2', 1)">▲</button>
+                <button onclick="changeNumber('mul-num2', -1)">▼</button>
+            </div>
+            <div class="result" id="mul-result">= 0</div>
+        </div>
+    </div>
+
+
+
+    <script src="./task4.js"></script>
+</body>
+
+</html>

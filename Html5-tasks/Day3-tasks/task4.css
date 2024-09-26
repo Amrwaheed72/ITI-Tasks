@@ -1,0 +1,138 @@
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    border: 2px solid black;
+    box-shadow: inset 0 0 30px 10px tomato;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.header button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header button:hover {
+    background-color: darkred;
+}
+
+.calc-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.calc-section {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: 0 10px;
+}
+
+.calc-section h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calc-section input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid tomato;
+    border-radius: 5px;
+    padding: 5px;
+}
+*/
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.section {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.addition {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+}
+
+.multiplication {
+    background: linear-gradient(to bottom, #43cea2, #185a9d);
+}
+
+.numbers {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.arrows button {
+    padding: 5px 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-result {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 40px;
+    color: #ffffff;
+} 
+#mul-result {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 40px;
+    color: #43cea2;
+} 
